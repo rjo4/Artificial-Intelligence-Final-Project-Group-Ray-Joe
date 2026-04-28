@@ -1,20 +1,7 @@
-#project
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-<<<<<<< Updated upstream
-# ── Placeholder course list (swap these out later) ───────────────────────────
-ALL_COURSES = [
-    "Temp 1",
-    "Temp 2",
-    "Temp 3",
-    "Temp 4",
-    "Temp 5",
-=======
-#test
-
-# ── Theme Colors ──────────────────────────────────────────────────────────────
+# ── Theme Colors ───────────────────────────────────────────────────────────────
 BG       = "#f0f4f8"
 DARK     = "#1a2332"
 WHITE    = "#ffffff"
@@ -28,102 +15,80 @@ RED      = "#ef4444"
 MUTED    = "#6b7280"
 LIGHT_BG = "#f8fafc"
 
-# ── Engineering Courses with Tags ─────────────────────────────────────────────
-ENGINEERING_COURSES = [
-    {
-        "code": "ENGR 1001",
-        "name": "Engineering Orientation",
-        "tags": ["engineering", "design"],
-    },
-    {
-        "code": "ENGR 1041",
-        "name": "Foundations of Design 1",
-        "tags": ["engineering", "design"],
-    },
-    {
-        "code": "ENGR 1051",
-        "name": "Foundations of Design 2",
-        "tags": ["engineering", "design"],
-    },
-    {
-        "code": "ECCS 1611",
-        "name": "Programming 1",
-        "tags": ["programming", "software"],
-    },
-    {
-        "code": "ECCS 1621",
-        "name": "Programming 2",
-        "tags": ["programming", "software"],
-    },
-    {
-        "code": "ECCS 1721",
-        "name": "Digital Logic",
-        "tags": ["electrical", "hardware"],
-    },
-    {
-        "code": "ECCS 2311",
-        "name": "Electric Circuits",
-        "tags": ["electrical"],
-    },
-    {
-        "code": "ECCS 2331",
-        "name": "Digital Signal Processing",
-        "tags": ["electrical", "signal_processing"],
-    },
-    {
-        "code": "ECCS 2341",
-        "name": "Electronics",
-        "tags": ["electrical", "hardware"],
-    },
-    {
-        "code": "ECCS 2381",
-        "name": "Maker Engineering",
-        "tags": ["robotics", "design", "embedded"],
-    },
-    {
-        "code": "ECCS 2671",
-        "name": "Data Structures & Algorithms 1",
-        "tags": ["programming", "software"],
-    },
-    {
-        "code": "ECCS 3241",
-        "name": "Embedded Hardware-Software",
-        "tags": ["embedded", "hardware", "programming"],
-    },
-    {
-        "code": "ECCS 3351",
-        "name": "Embedded Real-Time App",
-        "tags": ["embedded", "programming", "robotics"],
-    },
-    {
-        "code": "ECCS 3411",
-        "name": "Computer Security",
-        "tags": ["security", "programming", "networking"],
-    },
-    {
-        "code": "ECCS 3611",
-        "name": "Computer Architecture",
-        "tags": ["hardware", "electrical"],
-    },
-    {
-        "code": "ECCS 3631",
-        "name": "Networks & Data Communications",
-        "tags": ["networking", "software"],
-    },
-    {
-        "code": "ECCS 3661",
-        "name": "Operating Systems",
-        "tags": ["software", "programming"],
-    },
->>>>>>> Stashed changes
-]
+# ── Engineering Courses Organized by Category ──────────────────────────────────
+COURSES_BY_CATEGORY = {
+    "Basic Engineering": [
+        "Engineering Orientation",
+        "Foundations of Design 1",
+        "Foundations of Design 2",
+        "Statistics",
+        "Engineering Traditions and Culture in Rome",
+        "Professional Practice",
+        "Industrial Controllers",
+    ],
+    "Electrical, Computer Engineering & Computer Science": [
+        "Introduction to Programming",
+        "Electric Circuits",
+        "Web Development",
+        "Data Structures and Algorithms",
+        "Research Experience",
+        "Big Data Analytics",
+        "Applied Electromagnetics",
+        "Signals and Systems",
+        "Embedded Hardware-Software Code Design",
+        "Embedded Real-Time Applications",
+        "Software Development",
+        "UI/UX Design",
+        "Computer Architecture",
+        "Networks and Data Communication",
+        "Professional Certification Preparation",
+        "Power Systems",
+        "Information Science",
+        "Advanced Electronics",
+        "Theory of Computation",
+    ],
+    "Civil Engineering": [
+        "Surveying",
+        "Surveying Lab",
+        "Environmental Engineering",
+        "Geotechnical Engineering",
+        "Structural Analysis",
+        "Transportation Engineering",
+        "Water Resources Engineering",
+        "CFE Fundamentals",
+        "CFE Design Seminar 1",
+    ],
+    "Mechanical Engineering": [
+        "Engineering Material Science",
+        "Thermodynamics",
+        "Design for Manufacturing",
+        "Computer Applications",
+        "Fundamentals of Experimentation",
+        "Machine Component Design",
+        "3-D Modeling and Design",
+        "Dynamic Systems Modeling",
+        "Fluid Mechanics",
+        "Sensors and Measurements",
+        "Process of Design",
+        "Mechatronics",
+        "Computational Fluid Dynamics",
+        "Advanced Thermodynamics",
+        "Engineering Analysis",
+    ],
+}
+
+# ── Flat list of all courses as "Category | Course Name" strings ───────────────
+ALL_COURSES = []
+for category, courses in COURSES_BY_CATEGORY.items():
+    for course in courses:
+        ALL_COURSES.append(f"{category}  |  {course}")
 
 
 class StudentTrackerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Student Course Tracker")
-        self.root.geometry("700x620")
+        self.root.geometry("800x660")
         self.root.configure(bg="#f0f2f5")
         self.root.resizable(True, True)
 
@@ -132,7 +97,7 @@ class StudentTrackerApp:
 
         self._build_ui()
 
-    # ── UI Construction ───────────────────────────────────────────────────────
+    # ── UI Construction ────────────────────────────────────────────────────────
 
     def _build_ui(self):
         canvas = tk.Canvas(self.root, bg="#f0f2f5", highlightthickness=0)
@@ -195,7 +160,7 @@ class StudentTrackerApp:
             bg="#2c3e50",
         ).pack()
 
-    # ── Name Card ─────────────────────────────────────────────────────────────
+    # ── Name Card ──────────────────────────────────────────────────────────────
 
     def _build_name_card(self):
         body = self._card("Student Name")
@@ -212,7 +177,7 @@ class StudentTrackerApp:
 
         body.columnconfigure(0, weight=1)
 
-    # ── Courses Card ──────────────────────────────────────────────────────────
+    # ── Courses Card ───────────────────────────────────────────────────────────
 
     def _build_courses_card(self):
         body = self._card("Classes Already Taken")
@@ -222,6 +187,12 @@ class StudentTrackerApp:
             body,
             text="Select each course you have already completed:",
             font=("Helvetica", 11), bg="white", fg="#374151",
+        ).pack(anchor="w", pady=(0, 4))
+
+        tk.Label(
+            body,
+            text="Courses are listed as  \"Category  |  Course Name\"",
+            font=("Helvetica", 9, "italic"), bg="white", fg="#6b7280",
         ).pack(anchor="w", pady=(0, 10))
 
         self.courses_container = tk.Frame(body, bg="white")
@@ -243,7 +214,7 @@ class StudentTrackerApp:
         self._add_course_row()
         self._add_course_row()
 
-    # ── Save Bar ──────────────────────────────────────────────────────────────
+    # ── Save Bar ───────────────────────────────────────────────────────────────
 
     def _build_save_bar(self):
         bar = tk.Frame(self.inner, bg="#f0f2f5", pady=14, padx=20)
@@ -265,7 +236,7 @@ class StudentTrackerApp:
         )
         self.save_status.pack(side="left", padx=14)
 
-    # ── Course Row Logic ──────────────────────────────────────────────────────
+    # ── Course Row Logic ───────────────────────────────────────────────────────
 
     def _add_course_row(self):
         row_index = len(self.course_rows) + 1
@@ -283,7 +254,7 @@ class StudentTrackerApp:
         var = tk.StringVar(value="")
         combo = ttk.Combobox(
             row_frame, textvariable=var,
-            state="readonly", font=("Helvetica", 10), width=28,
+            state="readonly", font=("Helvetica", 10), width=52,
         )
         combo.pack(side="left", padx=(0, 10))
 
@@ -325,7 +296,7 @@ class StudentTrackerApp:
     def _refresh_all_combos(self):
         """
         Rebuild each combobox's option list so it only shows courses
-        that haven't been chosen by a *different* row.
+        that haven't been chosen by a different row.
         """
         chosen = {row["var"].get() for row in self.course_rows if row["var"].get()}
 
@@ -348,7 +319,7 @@ class StudentTrackerApp:
             else:
                 row["btn"].config(state="normal", bg="#ef4444", cursor="hand2")
 
-    # ── Save ──────────────────────────────────────────────────────────────────
+    # ── Save ───────────────────────────────────────────────────────────────────
 
     def _save_all(self):
         name = self.name_var.get().strip()
@@ -361,18 +332,21 @@ class StudentTrackerApp:
             messagebox.showwarning("No Courses", "Please select at least one course before saving.")
             return
 
+        # Format for display: just the course name (strip the category prefix)
+        display_courses = [c.split("  |  ")[-1] for c in selected_courses]
+
         summary = (
             f"Saved successfully!\n\n"
             f"Student: {name}\n"
-            f"Courses ({len(selected_courses)}): {', '.join(selected_courses)}"
+            f"Courses ({len(display_courses)}): {', '.join(display_courses)}"
         )
         messagebox.showinfo("Saved", summary)
         self.save_status.config(
-            text=f"✔  Saved {name} · {len(selected_courses)} course(s)"
+            text=f"✔  Saved {name} · {len(display_courses)} course(s)"
         )
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+# ── Entry Point ────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     root = tk.Tk()

@@ -23,14 +23,14 @@ from datetime import datetime
 # ── Helpers replicated from source files (pure logic, no tkinter) ──────────────
 
 MAJORS = [
-    "Basic Engineering",
+    "Foundational Engineering",
     "Electrical, Computer Engineering & Computer Science",
     "Civil Engineering",
     "Mechanical Engineering",
 ]
 
 _DEFAULT_FALL = {
-    "Basic Engineering": [
+    "Foundational Engineering": [
         "Engineering Orientation", "Foundations of Design 1", "Foundations of Design 2",
         "Statistics", "Engineering Traditions and Culture in Rome",
         "Professional Practice", "Industrial Controllers",
@@ -61,7 +61,7 @@ _DEFAULT_FALL = {
 }
 
 _DEFAULT_SPRING = {
-    "Basic Engineering": [
+    "Foundational Engineering": [
         "Engineering Graphics", "Technical Writing for Engineers",
         "Engineering Economics", "Ethics in Engineering", "Project Management",
         "Capstone Preparation", "Innovation and Entrepreneurship",
@@ -190,16 +190,16 @@ class TestDataLoading(unittest.TestCase):
 
     def test_load_courses_missing_file_uses_defaults(self):
         fall, spring = _load_courses(self.tmpdir / "no_courses.json")
-        self.assertIn("Basic Engineering", fall)
+        self.assertIn("Foundational Engineering", fall)
         self.assertIn("Mechanical Engineering", spring)
-        self.assertIn("Engineering Orientation", fall["Basic Engineering"])
+        self.assertIn("Engineering Orientation", fall["Foundational Engineering"])
 
     def test_load_courses_override_replaces_major(self):
         path = self.tmpdir / "courses_data.json"
-        override = {"fall": {"Basic Engineering": ["Custom Course A", "Custom Course B"]}, "spring": {}}
+        override = {"fall": {"Foundational Engineering": ["Custom Course A", "Custom Course B"]}, "spring": {}}
         _save_courses(path, override)
         fall, spring = _load_courses(path)
-        self.assertEqual(fall["Basic Engineering"], ["Custom Course A", "Custom Course B"])
+        self.assertEqual(fall["Foundational Engineering"], ["Custom Course A", "Custom Course B"])
         # Other majors should still be defaults
         self.assertIn("Electric Circuits", fall["Electrical, Computer Engineering & Computer Science"])
 
@@ -207,7 +207,7 @@ class TestDataLoading(unittest.TestCase):
         path = self.tmpdir / "courses_data.json"
         path.write_text("not json at all", encoding="utf-8")
         fall, spring = _load_courses(path)
-        self.assertIn("Engineering Orientation", fall["Basic Engineering"])
+        self.assertIn("Engineering Orientation", fall["Foundational Engineering"])
 
     def test_save_load_round_trip_capstones(self):
         path = self.tmpdir / "capstone_data.json"
@@ -225,13 +225,13 @@ class TestDataLoading(unittest.TestCase):
         self.assertIsInstance(parsed, list)
 
     def test_default_fall_course_counts(self):
-        self.assertEqual(len(_DEFAULT_FALL["Basic Engineering"]), 7)
+        self.assertEqual(len(_DEFAULT_FALL["Foundational Engineering"]), 7)
         self.assertEqual(len(_DEFAULT_FALL["Electrical, Computer Engineering & Computer Science"]), 19)
         self.assertEqual(len(_DEFAULT_FALL["Civil Engineering"]), 9)
         self.assertEqual(len(_DEFAULT_FALL["Mechanical Engineering"]), 15)
 
     def test_default_spring_course_counts(self):
-        self.assertEqual(len(_DEFAULT_SPRING["Basic Engineering"]), 8)
+        self.assertEqual(len(_DEFAULT_SPRING["Foundational Engineering"]), 8)
         self.assertEqual(len(_DEFAULT_SPRING["Electrical, Computer Engineering & Computer Science"]), 20)
         self.assertEqual(len(_DEFAULT_SPRING["Civil Engineering"]), 14)
         self.assertEqual(len(_DEFAULT_SPRING["Mechanical Engineering"]), 16)
@@ -348,38 +348,38 @@ class TestCourseFiltering(unittest.TestCase):
         self.assertEqual(len(result), total_expected)
 
     def test_flat_single_major_filters_correctly(self):
-        result = _flat(_DEFAULT_FALL, ["Basic Engineering"])
+        result = _flat(_DEFAULT_FALL, ["Foundational Engineering"])
         for item in result:
-            self.assertTrue(item.startswith("Basic Engineering  |  "))
+            self.assertTrue(item.startswith("Foundational Engineering  |  "))
 
     def test_flat_no_majors_returns_empty(self):
         result = _flat(_DEFAULT_FALL, [])
         self.assertEqual(result, [])
 
     def test_flat_separator_format(self):
-        result = _flat(_DEFAULT_FALL, ["Basic Engineering"])
+        result = _flat(_DEFAULT_FALL, ["Foundational Engineering"])
         for item in result:
             self.assertIn("  |  ", item)
             parts = item.split("  |  ")
             self.assertEqual(len(parts), 2)
-            self.assertEqual(parts[0], "Basic Engineering")
+            self.assertEqual(parts[0], "Foundational Engineering")
 
     def test_flat_unknown_major_returns_empty(self):
         result = _flat(_DEFAULT_FALL, ["Nonexistent Major"])
         self.assertEqual(result, [])
 
     def test_flat_dual_major_combines_courses(self):
-        result = _flat(_DEFAULT_FALL, ["Basic Engineering", "Civil Engineering"])
-        basic  = [r for r in result if r.startswith("Basic Engineering")]
+        result = _flat(_DEFAULT_FALL, ["Foundational Engineering", "Civil Engineering"])
+        basic  = [r for r in result if r.startswith("Foundational Engineering")]
         civil  = [r for r in result if r.startswith("Civil Engineering")]
-        self.assertEqual(len(basic), len(_DEFAULT_FALL["Basic Engineering"]))
+        self.assertEqual(len(basic), len(_DEFAULT_FALL["Foundational Engineering"]))
         self.assertEqual(len(civil), len(_DEFAULT_FALL["Civil Engineering"]))
 
     def test_course_name_extraction_from_flat_string(self):
-        flat_list = _flat(_DEFAULT_FALL, ["Basic Engineering"])
+        flat_list = _flat(_DEFAULT_FALL, ["Foundational Engineering"])
         for item in flat_list:
             course_name = item.split("  |  ")[-1]
-            self.assertIn(course_name, _DEFAULT_FALL["Basic Engineering"])
+            self.assertIn(course_name, _DEFAULT_FALL["Foundational Engineering"])
 
     def test_no_duplicate_courses_within_single_major(self):
         result = _flat(_DEFAULT_FALL, ["Mechanical Engineering"])
@@ -402,10 +402,10 @@ class TestCourseFiltering(unittest.TestCase):
 
     def test_already_chosen_exclusion(self):
         """Simulate the chosen-by-others exclusion logic."""
-        full_list = _flat(_DEFAULT_FALL, ["Basic Engineering"])
-        chosen_by_others = {"Basic Engineering  |  Statistics"}
+        full_list = _flat(_DEFAULT_FALL, ["Foundational Engineering"])
+        chosen_by_others = {"Foundational Engineering  |  Statistics"}
         available = [c for c in full_list if c not in chosen_by_others]
-        self.assertNotIn("Basic Engineering  |  Statistics", available)
+        self.assertNotIn("Foundational Engineering  |  Statistics", available)
         self.assertEqual(len(available), len(full_list) - 1)
 
 
@@ -643,31 +643,31 @@ class TestCourseManagement(unittest.TestCase):
 
     def test_add_course_to_fall_major(self):
         fall, spring = self._load()
-        fall["Basic Engineering"].append("New Engineering Course")
+        fall["Foundational Engineering"].append("New Engineering Course")
         self._save({"fall": fall, "spring": spring})
         fall2, _ = self._load()
-        self.assertIn("New Engineering Course", fall2["Basic Engineering"])
+        self.assertIn("New Engineering Course", fall2["Foundational Engineering"])
 
     def test_remove_course_from_spring_major(self):
         fall, spring = self._load()
         target = "Engineering Graphics"
-        self.assertIn(target, spring["Basic Engineering"])
-        spring["Basic Engineering"].remove(target)
+        self.assertIn(target, spring["Foundational Engineering"])
+        spring["Foundational Engineering"].remove(target)
         self._save({"fall": fall, "spring": spring})
         _, spring2 = self._load()
-        self.assertNotIn(target, spring2["Basic Engineering"])
+        self.assertNotIn(target, spring2["Foundational Engineering"])
 
     def test_restore_defaults_for_major(self):
         fall, spring = self._load()
-        fall["Basic Engineering"] = ["Only Course"]
+        fall["Foundational Engineering"] = ["Only Course"]
         self._save({"fall": fall, "spring": spring})
         # Restore
-        fall["Basic Engineering"] = list(_DEFAULT_FALL["Basic Engineering"])
+        fall["Foundational Engineering"] = list(_DEFAULT_FALL["Foundational Engineering"])
         self._save({"fall": fall, "spring": spring})
         fall2, _ = self._load()
         self.assertEqual(
-            set(fall2["Basic Engineering"]),
-            set(_DEFAULT_FALL["Basic Engineering"])
+            set(fall2["Foundational Engineering"]),
+            set(_DEFAULT_FALL["Foundational Engineering"])
         )
 
     def test_bulk_add_courses(self):
@@ -683,16 +683,16 @@ class TestCourseManagement(unittest.TestCase):
 
     def test_duplicate_course_not_added_twice(self):
         fall, spring = self._load()
-        original_count = len(fall["Basic Engineering"])
-        existing = fall["Basic Engineering"][0]
-        if existing not in fall["Basic Engineering"]:
-            fall["Basic Engineering"].append(existing)
+        original_count = len(fall["Foundational Engineering"])
+        existing = fall["Foundational Engineering"][0]
+        if existing not in fall["Foundational Engineering"]:
+            fall["Foundational Engineering"].append(existing)
         # Count should not grow
-        self.assertEqual(len(fall["Basic Engineering"]), original_count)
+        self.assertEqual(len(fall["Foundational Engineering"]), original_count)
 
     def test_removing_course_does_not_affect_other_majors(self):
         fall, spring = self._load()
-        fall["Basic Engineering"].pop()
+        fall["Foundational Engineering"].pop()
         self._save({"fall": fall, "spring": spring})
         fall2, _ = self._load()
         # Civil Engineering should be unchanged

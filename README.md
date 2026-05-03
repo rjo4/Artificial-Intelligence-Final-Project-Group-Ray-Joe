@@ -193,7 +193,7 @@ If absent, both apps fall back to the built-in defaults.
 
 ```jsonc
 {
-  "fall":   { "Basic Engineering": ["Engineering Orientation", ...], ... },
+  "fall":   { "Foundational Engineering": ["Engineering Orientation", ...], ... },
   "spring": { "Mechanical Engineering": ["Heat Transfer", ...], ... }
 }
 ```

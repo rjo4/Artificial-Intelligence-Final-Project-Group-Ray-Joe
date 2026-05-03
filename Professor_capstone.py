@@ -35,14 +35,14 @@ HEADER   = "#1e3a5f"
 
 # ── Major definitions mirrored from student_tracker ───────────────────────────
 MAJORS = [
-    "Basic Engineering",
+    "Foundational Engineering",
     "Electrical, Computer Engineering & Computer Science",
     "Civil Engineering",
     "Mechanical Engineering",
 ]
 
 _DEFAULT_FALL: dict[str, list[str]] = {
-    "Basic Engineering": [
+    "Foundational Engineering": [
         "Engineering Orientation","Foundations of Design 1","Foundations of Design 2",
         "Statistics","Engineering Traditions and Culture in Rome","Professional Practice",
         "Industrial Controllers",
@@ -71,7 +71,7 @@ _DEFAULT_FALL: dict[str, list[str]] = {
 }
 
 _DEFAULT_SPRING: dict[str, list[str]] = {
-    "Basic Engineering": [
+    "Foundational Engineering": [
         "Engineering Graphics","Technical Writing for Engineers","Engineering Economics",
         "Ethics in Engineering","Project Management","Capstone Preparation",
         "Innovation and Entrepreneurship","Sustainability in Engineering",

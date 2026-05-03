@@ -95,7 +95,7 @@ Example of WRONG value:    `"Embedded HW/SW Code Design"`
 ```
 
 Valid `<major_name>` keys (must match exactly):
-- `"Basic Engineering"`
+- `"Foundational Engineering"`
 - `"Electrical, Computer Engineering & Computer Science"`
 - `"Civil Engineering"`
 - `"Mechanical Engineering"`
@@ -195,7 +195,7 @@ They must stay in sync. If you modify one, modify the other identically.
 ### Fall majors and course counts (as of 2026-27)
 | Major | Courses |
 |---|---|
-| Basic Engineering | 7 |
+| Foundational Engineering | 7 |
 | Electrical, Computer Engineering & Computer Science | 19 |
 | Civil Engineering | 9 |
 | Mechanical Engineering | 15 |
@@ -203,7 +203,7 @@ They must stay in sync. If you modify one, modify the other identically.
 ### Spring majors and course counts (as of 2026-27)
 | Major | Courses |
 |---|---|
-| Basic Engineering | 8 |
+| Foundational Engineering | 8 |
 | Electrical, Computer Engineering & Computer Science | 20 |
 | Civil Engineering | 14 |
 | Mechanical Engineering | 16 |

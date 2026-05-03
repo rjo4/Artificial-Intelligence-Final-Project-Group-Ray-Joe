@@ -1,0 +1,209 @@
+[
+  {
+    "title": "Firecraft Safety Products Inventory Management System",
+    "summary": "Automate inventory tracking, accounting, and ISO report generation for FireCraft Safety Products — a manufacturer of structural fire gloves and exclusive distributor of an advanced gas detector. Products are manufactured overseas, fulfilled through a dealer network, and currently tracked entirely by hand using a SAGE accounting system. Work with CS alumnus Rob Twitchell to define warehouse efficiency requirements and implement the full inventory management system.",
+    "contact": "Rob Twitchell",
+    "majors": ["CS", "CpE"],
+    "tags": ["software", "inventory management", "database", "accounting", "automation", "enterprise software", "iso", "full stack", "requirements engineering"],
+    "related_courses": ["Introduction to Programming", "Data Structures and Algorithms", "Software Development", "Database Systems", "Object-Oriented Programming", "Networks and Data Communication", "Information Science", "Web Development"],
+    "required": true
+  },
+  {
+    "title": "OCLC Project",
+    "summary": "Develop modern library software services for OCLC (Online Computer Library Center) — a global nonprofit managing WorldCat, the world's largest bibliographic catalog with roughly 14 petabytes of data. The project will involve modern software development tools and data analytics. A more detailed description is forthcoming from industry contact T.J. Godsey.",
+    "contact": "T.J. Godsey",
+    "majors": ["CS", "CpE"],
+    "tags": ["software", "big data", "analytics", "database", "cloud computing", "library systems", "data engineering", "full stack"],
+    "related_courses": ["Software Development", "Big Data Analytics", "Data Structures and Algorithms", "Database Systems", "Cloud Computing", "Object-Oriented Programming", "Information Science", "Web Development"],
+    "required": true
+  },
+  {
+    "title": "GROB Systems: Intelligent Robot Bin Picking Automation",
+    "summary": "Build a fully functional vision-guided bin picking system where a robot and 3D camera identify and retrieve randomly oriented parts from a bulk container without collisions. Workstreams cover mechanical design in Siemens NX, electrical schematics and pneumatic actuation, PLC programming and controls integration, FANUC ROBOGUIDE robot programming, Siemens Process/Plant simulation, and MechMind 3D vision integration. The team delivers a working bin-picking cell with a complete digital twin.",
+    "contact": "Luciano Oliveira",
+    "majors": ["ECCS", "ME"],
+    "tags": ["robotics", "automation", "plc", "computer vision", "mechatronics", "3d modeling", "simulation", "manufacturing", "industrial automation", "embedded systems"],
+    "related_courses": ["Mechatronics", "Industrial Controllers", "Robotics", "Computer Vision", "3-D Modeling and Design", "Sensors and Measurements", "Embedded Hardware-Software Code Design", "Control Systems", "Machine Component Design", "Robotics Programming", "Manufacturing Processes"],
+    "required": true
+  },
+  {
+    "title": "Argonne National Lab Quantum Instrumentation Project",
+    "summary": "Design and implement a robust control plane and GUI for the Argonne Quantum Network (ArQNet) testbed — a telecom-grade quantum local area network. Harden a proof-of-concept orchestrator built on the MatSci lab automation framework for reliability and external user access, enabling resource reservation of control computers, photon sources, and detectors. Approximately five students with software engineering experience needed; a mix of CpE and CS is ideal as the software interfaces directly with quantum hardware.",
+    "contact": "Robert Hayek / Dr. Ahmed Ammar",
+    "majors": ["CpE", "CS"],
+    "tags": ["quantum computing", "networking", "software engineering", "gui", "resource management", "research", "embedded systems", "systems programming", "automation"],
+    "related_courses": ["Software Development", "Networks and Data Communication", "Embedded Hardware-Software Code Design", "Operating Systems", "Computer Architecture", "Object-Oriented Programming", "Database Systems", "Signals and Systems"],
+    "required": true
+  },
+  {
+    "title": "eSight Go Computer Mouse Design for the Visually Impaired",
+    "summary": "Design and build an all-in-one computer mouse that simultaneously controls a standard PC and the Bluetooth vision controls (zoom, color filters, contrast) of eSight Go augmented-vision glasses worn by a user with X-Linked Retinitis Pigmentosa. The solution should let the user intuitively coordinate mouse movements and vision adjustments together. Patent co-authorship opportunity with ONU.",
+    "contact": "Chad Hayes",
+    "majors": ["ECE"],
+    "tags": ["hardware design", "bluetooth", "embedded systems", "accessibility", "hci", "product design", "sensors", "patent", "assistive technology"],
+    "related_courses": ["Embedded Hardware-Software Code Design", "Embedded Real-Time Applications", "Sensors and Measurements", "Electric Circuits", "Advanced Electronics", "Human-Computer Interaction", "Digital Logic Design"],
+    "required": true
+  },
+  {
+    "title": "Cenovus: Wireless Instrumentation and OT Infrastructure",
+    "summary": "Develop a secure operational technology (OT) network for Cenovus that communicates plant control and process data wirelessly across the facility. Determine wireless network coverage in the field, design a secure-by-design wireless network architecture, and select appropriate wireless transmitters and network hardware. Process data is sensitive, so OT security must be built into every design decision.",
+    "contact": "Cenovus Energy",
+    "majors": ["ECCS"],
+    "tags": ["wireless networking", "ot security", "cybersecurity", "iot", "process control", "industrial automation", "network design", "embedded systems"],
+    "related_courses": ["Networks and Data Communication", "Cybersecurity Fundamentals", "Wireless Communications", "Applied Electromagnetics", "Power Systems", "Industrial Controllers", "Internet of Things", "Signals and Systems"],
+    "required": true
+  },
+  {
+    "title": "Blank Part Cutoff Sorting",
+    "summary": "Implement and train a Cognex AI vision system to reliably identify surface defects (scratches, blemishes) on metal stampings as they exit a stamping press at Ohio Valley Manufacturing. Then design and prototype an automated system that removes unacceptable parts from the production line. Must operate at production speeds, require zero human intervention, and be portable by forklift so it can be reconfigured for different products.",
+    "contact": "Nick Watson / John Fanello",
+    "majors": ["ME", "ECCS"],
+    "tags": ["machine learning", "computer vision", "automation", "manufacturing", "ai", "quality control", "mechatronics", "industrial automation", "sensors"],
+    "related_courses": ["Computer Vision", "Machine Learning", "Mechatronics", "Sensors and Measurements", "Manufacturing Processes", "Industrial Controllers", "Control Systems", "Design for Manufacturing", "Embedded Real-Time Applications"],
+    "required": true
+  },
+  {
+    "title": "Padrone's Pizza Automated Adjustable Pizza Dough Rounder",
+    "summary": "Design and build an affordable automated pizza dough rolling machine for a small local restaurant that processes 300 lbs of dough per week. Must produce multiple pizza sizes (7, 10, 12, 14, and 16 inches) using adjustable motor-controlled rollers, operate on 120VAC/15A, fit within 24x24 inches, use food-safe materials, and require minimal operator training.",
+    "contact": "Darren (Padrone's Pizza, Ada) / Seth Chamberlin",
+    "majors": ["ECE", "ME"],
+    "tags": ["automation", "mechanical design", "control systems", "sensors", "motors", "product design", "food safety", "embedded systems", "actuators"],
+    "related_courses": ["Control Systems", "Sensors and Measurements", "Machine Component Design", "Design for Manufacturing", "Mechatronics", "Embedded Real-Time Applications", "Electric Circuits", "Dynamic Systems Modeling"],
+    "required": true
+  },
+  {
+    "title": "GPI Project",
+    "summary": "GPI's Kenton, OH facility produces over 10 million paper cups per day. Past capstone projects have addressed automated case sealers, pneumatic cup conveyance systems, and devices to safely move 500-lb rolls of paper. The exact 2026-27 project is TBD but will be in the controls, mechanical design, or mechatronics space. Dr. Funke is on sabbatical at GPI and will help finalize the scope.",
+    "contact": "Dr. Larry Funke / Kevin Jansen",
+    "majors": ["ME", "ECCS"],
+    "tags": ["controls", "mechatronics", "manufacturing automation", "mechanical design", "plc", "industrial engineering", "process control"],
+    "related_courses": ["Industrial Controllers", "Mechatronics", "Machine Component Design", "Dynamic Systems Modeling", "Control Systems", "Manufacturing Processes", "Advanced Manufacturing", "Sensors and Measurements"],
+    "required": true
+  },
+  {
+    "title": "Norada Lanes Bowling Control and Monitoring System",
+    "summary": "Redesign the aging control and monitoring systems for the lane machines at Norada Lanes, a small 8-lane bowling alley experiencing frequent pin-setting failures, sweep malfunctions, and ball jams. Replace or augment existing controls with PLCs or microcontrollers and add sensor/camera-based monitoring to detect abnormal conditions early. Log performance data and report issues to a mechanic dashboard for preventive maintenance.",
+    "contact": "Vickie Wolber / Jay Wolber",
+    "majors": ["ECE"],
+    "tags": ["plc", "embedded systems", "sensors", "monitoring", "control systems", "dashboard", "preventive maintenance", "iot", "industrial"],
+    "related_courses": ["Industrial Controllers", "Embedded Real-Time Applications", "Sensors and Measurements", "Embedded Hardware-Software Code Design", "Control Systems", "Networks and Data Communication", "Internet of Things", "Digital Logic Design"],
+    "required": true
+  },
+  {
+    "title": "Healthwise Mobile Health Clinic Data Services",
+    "summary": "Build a new data storage and analysis platform for ONU's Mobile Health Clinic, which serves underserved populations across Hardin, Allen, and Auglaize counties. Replace fragmented Excel spreadsheets with a system providing HIPAA-compliant data entry with validation, schema management, a stakeholder-facing data visualization dashboard, and integration with an existing route optimization pipeline.",
+    "contact": "Michael Rush / Dr. Kropp",
+    "majors": ["CS", "CpE"],
+    "tags": ["database", "data analytics", "hipaa", "healthcare", "data visualization", "software engineering", "full stack", "public health", "web development"],
+    "related_courses": ["Database Systems", "Software Development", "Big Data Analytics", "Web Development", "Information Science", "Data Structures and Algorithms", "Cloud Computing", "Object-Oriented Programming"],
+    "required": true
+  },
+  {
+    "title": "Pharmacy Patient Simulator",
+    "summary": "Develop a software system that generates realistic simulated datasets of 100+ unique patients with varying disease states and lab values (A1c, proteinuria, medication adherence) based on configurable probability inputs. Output to Excel or similar format to support Dr. Jewell's pharmacy student training course. A sample document of anonymous patient data will be provided for reference.",
+    "contact": "Dr. T'Bony Jewell",
+    "majors": ["CS", "CpE"],
+    "tags": ["simulation", "software", "healthcare", "data generation", "statistics", "patient data", "pharmacy", "python", "excel"],
+    "related_courses": ["Software Development", "Introduction to Programming", "Statistics", "Database Systems", "Object-Oriented Programming", "Artificial Intelligence", "Big Data Analytics"],
+    "required": false
+  },
+  {
+    "title": "Low-Power Mesh-Based Sensor Network for Remote Monitoring",
+    "summary": "Design and evaluate a small-scale distributed sensing system with multiple mesh-connected low-power nodes and a central gateway for outdoor or remote environments without reliable power or Wi-Fi. Nodes support flexible sensor interfacing via UART, SPI, I2C, and analog inputs with persistent data storage. The gateway aggregates all node data and connects to a host computer for configuration and retrieval.",
+    "contact": "Elliot Schmeling",
+    "majors": ["ECCS"],
+    "tags": ["iot", "embedded systems", "wireless", "sensors", "mesh networking", "low power", "hardware design", "remote monitoring", "data collection"],
+    "related_courses": ["Embedded Hardware-Software Code Design", "Embedded Real-Time Applications", "Wireless Communications", "Networks and Data Communication", "Sensors and Measurements", "Internet of Things", "Signals and Systems", "Digital Logic Design"],
+    "required": false
+  },
+  {
+    "title": "Fashion Interface — Virtual Fitting System",
+    "summary": "Develop a prototype virtual fitting system using a 3D scanner that captures a user's body and converts it to a digital 3D model. Integrate simple clothing representations to visualize how different sizes and styles fit, and deliver the results through an interactive interface. End-to-end pipeline spans data acquisition, 3D model processing, clothing integration, and user interaction.",
+    "contact": "Dr. Firas Hassan",
+    "majors": ["ECCS"],
+    "tags": ["3d scanning", "computer vision", "graphics", "ui/ux", "hci", "software", "3d modeling", "virtual fitting", "data processing"],
+    "related_courses": ["Computer Vision", "UI/UX Design", "Software Development", "Human-Computer Interaction", "3-D Modeling and Design", "Object-Oriented Programming", "Deep Learning"],
+    "required": false
+  },
+  {
+    "title": "Hardware Password Manager",
+    "summary": "Design and build a USB-style hardware device that securely stores cryptographic keys and unlocks them via biometric authentication (fingerprint sensor) using a passkey-style approach based on public-key cryptography. Develop both hardware and software components including secure key storage, biometric interfacing, and host system communication. Explore hardware-software co-design tradeoffs in cost, performance, and security.",
+    "contact": "Dr. Firas Hassan",
+    "majors": ["ECCS"],
+    "tags": ["cybersecurity", "hardware", "embedded systems", "cryptography", "biometrics", "security", "hardware-software co-design", "authentication", "digital logic"],
+    "related_courses": ["Cybersecurity Fundamentals", "Embedded Hardware-Software Code Design", "Computer Architecture", "Advanced Electronics", "Theory of Computation", "Digital Logic Design", "Embedded Real-Time Applications", "Signals and Systems"],
+    "required": false
+  },
+  {
+    "title": "Smart Trash Sorting Attachment for Standard Waste Bins",
+    "summary": "Design and develop a smart sorting mechanism that attaches to a standard trash bin, allowing users to drop any waste into a single input opening while the system automatically sorts materials (recyclables vs. landfill) internally. Improves recycling rates without requiring behavioral change from users.",
+    "contact": "Dr. Enass Hriba",
+    "majors": ["ECCS"],
+    "tags": ["iot", "automation", "sensors", "machine learning", "sustainability", "embedded systems", "mechatronics", "recycling", "computer vision"],
+    "related_courses": ["Sensors and Measurements", "Embedded Real-Time Applications", "Machine Learning", "Mechatronics", "Internet of Things", "Computer Vision", "Embedded Hardware-Software Code Design"],
+    "required": false
+  },
+  {
+    "title": "FridgeApp — Smart Refrigerator Inventory System",
+    "summary": "Build an app-connected smart refrigerator system that automatically scans and records groceries as they are placed inside, providing a real-time digital inventory accessible from anywhere via mobile app. Also monitors internal conditions (temperature changes, door-open events) with push notifications.",
+    "contact": "Dr. Khalid Al-Olimat",
+    "majors": ["CS", "CpE"],
+    "tags": ["iot", "mobile app", "software", "database", "sensors", "embedded systems", "full stack", "smart home", "computer vision"],
+    "related_courses": ["Internet of Things", "Mobile App Development", "Database Systems", "Software Development", "Embedded Real-Time Applications", "Sensors and Measurements", "Web Development", "Object-Oriented Programming"],
+    "required": false
+  },
+  {
+    "title": "CleanSlate: Autonomous Whiteboard Cleaning Robot",
+    "summary": "Design and build a compact autonomous robotic system that navigates the surface of a classroom whiteboard and systematically erases written content without human intervention. Addresses inefficiencies from tight professor schedules between back-to-back classes and the learning disruption of partially erased boards.",
+    "contact": "Dr. Khalid Al-Olimat",
+    "majors": ["EE", "CpE"],
+    "tags": ["robotics", "autonomous systems", "embedded systems", "sensors", "mechatronics", "control systems", "mechanical design", "motion planning"],
+    "related_courses": ["Robotics", "Embedded Hardware-Software Code Design", "Control Systems", "Sensors and Measurements", "Mechatronics", "Robotics Programming", "Embedded Real-Time Applications", "Machine Component Design"],
+    "required": false
+  },
+  {
+    "title": "IEEE Micromouse",
+    "summary": "Design a tiny autonomous electromechanical robot from scratch (not a kit) that uses onboard sensors and mapping algorithms to navigate a maze as fast as possible. The team must join IEEE and compete at minimum in the IEEE Region 2 competition. Covers mechanical design, sensor integration, embedded programming, and autonomous pathfinding algorithms. NOTE: IEEE membership required.",
+    "contact": "Dr. Khalid Al-Olimat",
+    "majors": ["ECCS"],
+    "tags": ["robotics", "autonomous systems", "embedded systems", "sensors", "algorithms", "competition", "ieee", "pathfinding", "maze solving", "motion planning"],
+    "related_courses": ["Embedded Hardware-Software Code Design", "Embedded Real-Time Applications", "Sensors and Measurements", "Data Structures and Algorithms", "Robotics Programming", "Digital Logic Design", "Computer Architecture"],
+    "required": false
+  },
+  {
+    "title": "Robotic Football Advanced Center",
+    "summary": "Develop a next-generation robotic Center robot compatible with ONU's new autonomous Quarterback for the CRFC competition. The old Center has physical interface limitations with the new QB model. The project is open-ended by design — no single optimal configuration exists for snap mechanics, drivetrain layout, or control architecture — opening the door for innovation across mechanical design, sensing, actuation, and closed-loop control.",
+    "contact": "Landon Myers",
+    "majors": ["ME", "ECCS"],
+    "tags": ["robotics", "mechanical design", "control systems", "autonomous", "mechatronics", "competition", "sensors", "drivetrain", "actuators"],
+    "related_courses": ["Robotics", "Control Systems", "Machine Component Design", "Mechatronics", "Embedded Real-Time Applications", "Dynamic Systems Modeling", "Robotics Programming", "Sensors and Measurements"],
+    "required": false
+  },
+  {
+    "title": "SafeSmart Bike Rack",
+    "summary": "Create a smart bike rack with a built-in locking mechanism: the rider aligns their bike frame with a slot in one pole, scans their student ID, and a strong metal rod automatically extends through the bike frame into the opposite pole — making removal impossible without damaging the bike. Retraction requires the same student ID scan, preventing unauthorized release.",
+    "contact": "Briar Ross",
+    "majors": ["ME", "ECCS"],
+    "tags": ["product design", "security", "embedded systems", "sensors", "mechanical design", "rfid", "authentication", "anti-theft", "actuators"],
+    "related_courses": ["Machine Component Design", "Embedded Hardware-Software Code Design", "Sensors and Measurements", "Design for Manufacturing", "3-D Modeling and Design", "Electric Circuits", "Embedded Real-Time Applications"],
+    "required": false
+  },
+  {
+    "title": "IoT-Based Smart Waste Management System for the JLK Building",
+    "summary": "Design an IoT platform for the JLK Building that detects when individual trash cans reach capacity and automatically notifies janitorial staff for timely replacement. Work with building stakeholders to define system requirements and develop a real-time monitoring dashboard with waste-level visibility across all cans in the building.",
+    "contact": "Dr. Ahmed Ammar / Dr. Ben McPheron",
+    "majors": ["ECCS"],
+    "tags": ["iot", "sensors", "embedded systems", "dashboard", "wireless", "smart building", "automation", "monitoring", "web development"],
+    "related_courses": ["Internet of Things", "Sensors and Measurements", "Networks and Data Communication", "Embedded Real-Time Applications", "Web Development", "Wireless Communications", "Embedded Hardware-Software Code Design"],
+    "required": false
+  },
+  {
+    "title": "Smart Vent — Retrofit HVAC Airflow Control Device",
+    "summary": "Design a retrofit device that installs on existing HVAC ventilation registers to independently control airflow in individual rooms using local temperature sensing or manual user adjustment — no integration with the building's main HVAC controller required. Solves hot and cold zones in homes and dormitories at a fraction of the cost of full smart-thermostat zoning systems.",
+    "contact": "Matthew Orr",
+    "majors": ["ME", "ECCS"],
+    "tags": ["hvac", "sensors", "embedded systems", "control systems", "iot", "energy efficiency", "mechanical design", "smart home", "thermal systems"],
+    "related_courses": ["HVAC Systems", "Sensors and Measurements", "Control Systems", "Embedded Real-Time Applications", "Thermodynamics", "Fluid Mechanics", "Dynamic Systems Modeling", "Internet of Things"],
+    "required": false
+  }
+]

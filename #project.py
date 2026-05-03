@@ -1,3 +1,4 @@
+"""
 • Separate Fall and Spring course sections
 • Per-row search bar that filters the dropdown in real time
 • Major filter checkboxes per section (supports dual-major / mixed selections)
